@@ -1,0 +1,235 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 20, 24);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+img.imgme {
+    /* height: 33.7em; */
+    height: 85vh;
+    transform: translate(5%, 18%);
+    -webkit-transform: translate(5%, 18%);
+}
+
+.halfcircle {
+    position: absolute;
+    border-radius: 50% 50% 50% 0;
+    border: 0.1em solid #fff;
+    background: rgb(0, 26, 31);
+    height: 50em;
+    width: 50em;
+    box-shadow: 0px 0px 11px 0px #fff;
+    -webkit-box-shadow: 0px 0px 11px 0px #fff;
+    -moz-box-shadow: 0px 0px 11px 0px #fff;
+    transform: translate(-20%, 52%);
+    -webkit-transform: translate(-20%, 52%);
+}
+
+.machine {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: machineRotate linear infinite;
+}
+
+.machine-1 {
+    top: -2em;
+    left: 3em;
+    width: 10em;
+    height: 10em;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.machine-2 {
+    top: -6.5em;
+    left: 5em;
+    width: 11.5em;
+    height: 11.5em;
+    animation-duration: 3s;
+}
+
+.machine-3 {
+    top: -5.5em;
+    left: -3.5em;
+    width: 13em;
+    height: 13em;
+    animation-duration: 4s;
+}
+
+.machine img {
+    overflow: hidden;
+}
+
+.machine-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 0.1em solid #fff;
+    background-color: rgb(241, 241, 241);
+    padding: 1.5em;
+    box-shadow: 0px 0px 60px 20px #fff;
+    -webkit-box-shadow: 0px 0px 60px 20px #fff;
+    -moz-box-shadow: 0px 0px 60px 20px #fff;
+}
+
+.circle-animation {
+    position: absolute;
+    width: 530px;
+    height: 530px;
+    left: 2em;
+    animation: circleMove 2s linear infinite;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    opacity: 0;
+    animation: scaleIn 3s infinite cubic-bezier(.36, .11, .89, .32);
+}
+
+.skills {
+    position: absolute;
+    left: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: skillsMove 7s linear infinite;
+}
+
+.skills img {
+    position: absolute;
+    width: 3em;
+}
+
+.skills-bg {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 3em;
+    height: 3em;
+    padding: .9rem;
+}
+
+
+div.information {
+    margin: auto;
+}
+
+div.main-object {
+    transform: matrix(1, 0.2, -1, 0.7, 0, 0);
+}
+
+div.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+div.info-1 {
+    transform: translate(10%, 20%);
+}
+div.info-2 {
+    transform: translate(-40%);
+}
+div.info-3 {
+    transform: translate(40%);
+}
+div.info-4 {
+    transform: translate(-10%, -30%);
+}
+
+div.info img {
+    position: absolute;
+    height: 3em;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10%;
+    box-shadow: 20px 20px 5px 0px rgb(32, 212, 218);
+
+}
+div.info img:hover {
+    height: 2em;
+}
+
+div.text-info {
+    width: 25em;
+    margin-top: 10em;
+    border: 1px solid rgb(32, 212, 218);
+    box-shadow: 0px -90px 200px 20px rgb(32, 212, 218);
+}
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(.1, .1);
+        opacity: .7;
+    }
+
+    to {
+        transform: scale(.6, .6);
+        opacity: 0;
+    }
+}
+
+@keyframes circleMove {
+    0% {
+        transform:
+            translate(0, 165px) rotate(-200deg);
+        -webkit-transform:
+            translate(0, 165px) rotate(-200deg);
+
+    }
+
+    100% {
+        transform:
+            translate(0, 165px) rotate(-315deg);
+        -webkit-transform:
+            translate(0, 165px) rotate(-315deg);
+    }
+}
+
+@keyframes skillsMove {
+    0% {
+        transform:
+            translate(0, 0);
+        -webkit-transform:
+            translate(0, 0);
+
+    }
+
+    100% {
+        transform:
+            translate(0, 700px);
+        -webkit-transform:
+            translate(0, 700px);
+    }
+}
+
+@keyframes machineRotate {
+    0% {
+        transform:
+            rotate(0deg);
+        -webkit-transform:
+            rotate(0deg);
+
+    }
+
+    100% {
+        transform:
+            rotate(360deg);
+        -webkit-transform:
+            rotate(360deg);
+    }
+}

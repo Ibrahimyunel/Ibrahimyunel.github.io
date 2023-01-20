@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-wrapper">
+            <div class="circle-animation">
+                <div class="circle-wrapper">
+                    <div class="circle" style="animation-delay: 0s"></div>
+                    <div class="circle" style="animation-delay: 1s"></div>
+                    <div class="circle" style="animation-delay: 2s"></div>
+                    <div class="circle" style="animation-delay: 3s"></div>
+                </div>
+            </div>
+            <div class="circle-animation" style="animation-delay: 1s;">
+                <div class="circle-wrapper">
+                    <div class="circle" style="animation-delay: 0s"></div>
+                    <div class="circle" style="animation-delay: 1s"></div>
+                    <div class="circle" style="animation-delay: 2s"></div>
+                    <div class="circle" style="animation-delay: 3s"></div>
+                </div>
+            </div>
+            <div class="skills-animation"></div>
+            <div class="machine-wrapper">
+                <div class="machine machine-1">
+                    <div class="machine-circle"></div>
+                    <img src="./assets/automation.png" alt="">
+                </div>
+                <div class="machine machine-2">
+                    <div class="machine-circle"></div>
+                    <img src="./assets/automation.png" alt="">
+                </div>
+                <div class="machine machine-3">
+                    <div class="machine-circle"></div>
+                    <img src="./assets/automation.png" alt="">
+                </div>
+            </div>
+            <div class="halfcircle"></div>
+            <img class="imgme" src="./assets/me.png" alt="it's me :)">
+        </div>
+        <div class="information">
+            <div class="text-info"></div>
+            <div class="main-object">
+                <div class="info info-1">
+                    <img src="./assets/html.png" alt="">
+                    <!-- <div class="info-bg"></div> -->
+                </div>
+                <div class="info info-2">
+                    <img src="./assets/css.png" alt="">
+                    <!-- <div class="info-bg"></div> -->
+                </div>
+                <div class="info info-3">
+                    <img src="./assets/js.png" alt="">
+                    <!-- <div class="info-bg"></div> -->
+                </div>
+                <div class="info info-4">
+                    <img src="./assets/js.png" alt="">
+                    <!-- <div class="info-bg"></div> -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var skillsAnimation = document.querySelector("div.skills-animation");
+        var arrSkills = ["html", "css", "js", "react", "bootstrap", "php", "python"];
+        var skills = "";
+        for (var i = 0; i < arrSkills.length; i++) {
+            skills += `<div class="skills" style="animation-delay: ${i}s">
+                            <img src="./assets/${arrSkills[i]}.png" alt="${arrSkills[i]}">
+                            <div class="skills-bg"></div>
+                        </div>`;
+        }
+        skillsAnimation.innerHTML = skills;
+    </script>
+</body>
+
+</html>
