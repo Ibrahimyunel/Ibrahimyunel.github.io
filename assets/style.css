@@ -4,6 +4,8 @@ html {
     padding: 0;
     background: rgb(0, 20, 24);
     overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
 }
 
 .container {
@@ -124,7 +126,7 @@ img.imgme {
 
 
 div.information {
-    margin: auto;
+    margin: 12em auto;
 }
 
 div.main-object {
@@ -135,19 +137,24 @@ div.info {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2em;
+    margin: 5em;
 }
+
 div.info-1 {
-    transform: translate(10%, 20%);
+    margin: 2em;
+    transform: translate(10%);
 }
+
 div.info-2 {
-    transform: translate(-40%);
+    transform: translate(-50%);
 }
+
 div.info-3 {
-    transform: translate(40%);
+    transform: translate(50%);
 }
+
 div.info-4 {
-    transform: translate(-10%, -30%);
+    transform: translate(-10%);
 }
 
 div.info img {
@@ -159,15 +166,22 @@ div.info img {
     box-shadow: 20px 20px 5px 0px rgb(32, 212, 218);
 
 }
+
 div.info img:hover {
     height: 2em;
 }
 
 div.text-info {
     width: 25em;
-    margin-top: 10em;
     border: 1px solid rgb(32, 212, 218);
-    box-shadow: 0px -90px 200px 20px rgb(32, 212, 218);
+    box-shadow: 0px -90px 200px 20px rgb(32, 212, 218, 0.6);
+}
+
+g {
+    font-size:3rem;
+    display: flex;
+    justify-content: center;
+    color: #ccc;
 }
 
 
