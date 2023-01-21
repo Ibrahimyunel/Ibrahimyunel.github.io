@@ -108,7 +108,7 @@ img.imgme {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: skillsMove 7s linear infinite;
+    animation: skillsMove 8s linear infinite;
 }
 
 .skills img {
@@ -164,7 +164,7 @@ div.info img {
     background-color: #fff;
     border-radius: 10%;
     box-shadow: 20px 20px 5px 0px rgb(32, 212, 218);
-
+    transition: .3s;
 }
 
 div.info img:hover {
@@ -182,6 +182,28 @@ g {
     display: flex;
     justify-content: center;
     color: #ccc;
+}
+
+div.account-link {
+    margin-top: .4em;
+    display: flex;
+    /* gap: 3em; */
+    justify-content: space-around;
+}
+div.account-link > :not(:hover) {
+    opacity: .6;
+    color: #ccc;
+}
+a {
+    height: 1.2em;
+    display: flex;
+    gap: .2em;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+a > img {
+    height: 100%;
 }
 
 
@@ -225,9 +247,9 @@ g {
 
     100% {
         transform:
-            translate(0, 700px);
+            translate(0, 800px);
         -webkit-transform:
-            translate(0, 700px);
+            translate(0, 800px);
     }
 }
 
