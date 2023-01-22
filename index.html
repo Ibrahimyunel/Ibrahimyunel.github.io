@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim</title>
     <link rel="icon" href="./assets/me.png">
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Lobster&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Lobster&family=Source+Sans+Pro:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -49,6 +51,7 @@
             <img class="imgme" src="./assets/me.png" alt="it's me :)">
         </div>
         <div class="information">
+            <p class="show-text-info" id="show_text_info"></p>
             <div class="text-info"></div>
             <g>Hi, I'm Ibrahim</g>
             <div class="text-info"></div>
@@ -67,19 +70,19 @@
                 </a>
             </div>
             <div class="main-object">
-                <div class="info info-1">
-                    <img src="./assets/html.png" alt="">
+                <div class="info info-1" onclick="showInfo(this)">
+                    <div class="sign" id="sign"></div>
+                    <img src="./assets/education.png" alt="">
                 </div>
-                <div class="info info-2">
-                    <img src="./assets/css.png" alt="">
+                <div class="info info-2" onclick="showInfo(this)">
+                    <img src="./assets/code.png" alt="">
                 </div>
-                <div class="info info-3">
-                    <img src="./assets/js.png" alt="">
+                <div class="info info-3" onclick="showInfo(this)">
+                    <img src="./assets/fun.png" alt="">
                 </div>
-                <div class="info info-4">
-                    <img src="./assets/js.png" alt="">
+                <div class="info info-4" onclick="showInfo(this)">
+                    <img src="./assets/goals.png" alt="">
                 </div>
-                
             </div>
         </div>
     </div>
@@ -95,6 +98,25 @@
                         </div>`;
         }
         skillsAnimation.innerHTML = skills;
+
+        var arrinfo = [{ info: "I'm from Indonesia, I've been studying in Budi Luhur University for the Information System major" },
+        { info: "In collage the most focused subject is about Data Science. However, I'm really interested in web development so in my spare time i'm exploring skills about it" },
+        { info: "I could understand the flow of program development, especially web development because i'm so glad when i was successfully implementing a friendly and useful UI/UX in accordance with needs" },
+        { info: "My goals as a developer is become a Fullstack developer, to achieve it i decided to be proficient as a Front-end developer first" }
+        ];
+        var showText = document.getElementById("show_text_info");
+        var sign = document.getElementById("sign");
+        const showInfo = (t) => {
+            for (var i = 0; i < arrinfo.length; i++) {
+                if (t.className.includes(i + 1)) {
+                    showText.innerHTML = arrinfo[i].info;
+                    t.insertBefore(sign, t.firstChild);
+                }
+            }
+        }
+
+        document.querySelector(".info-1").click();
+
     </script>
 </body>
 
