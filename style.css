@@ -108,7 +108,7 @@ img.imgme {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: skillsMove 8s linear infinite;
+    animation: skillsMove 10s linear infinite;
 }
 
 .skills img {
@@ -274,9 +274,9 @@ a>img {
 
     100% {
         transform:
-            translate(0, 800px);
+            translate(0, 1000px);
         -webkit-transform:
-            translate(0, 800px);
+            translate(0, 1000px);
     }
 }
 
