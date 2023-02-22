@@ -96,7 +96,7 @@ img.imgme {
     padding-left: 30%;
     left: 4em;
     animation: circleMove 2s linear infinite;
-    bottom: 18%;
+    bottom: 17%;
 }
 
 .circle {
@@ -116,7 +116,8 @@ img.imgme {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: skillsMove 10s linear infinite;
+    animation: skillsMove 11s linear infinite;
+    /*   change second here to add new skills guyssssssssssssssssssssssssssssssssssssssssssssssssssssss   */
 }
 
 .skills img {
@@ -387,19 +388,19 @@ a>img {
 
     }
 
-    44% {
+    42% {
         opacity: 1;
     }
 
-    45% {
+    43% {
         opacity: 0;
     }
 
     100% {
         transform:
-            translate(0, 1000px);
+            translate(0, 1100px);
         -webkit-transform:
-            translate(0, 1000px);
+            translate(0, 1100px);
         opacity: 0;
     }
 }
