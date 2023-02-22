@@ -17,7 +17,6 @@ html {
 
 img.imgme {
     position: absolute;
-    /* height: 85vh; */
     width: 40%;
     transform: translate(5%, 0%);
     -webkit-transform: translate(5%, 0%);
@@ -92,7 +91,6 @@ img.imgme {
 
 .circle-animation {
     position: absolute;
-    /* width: 530px; */
     height: 30%;
     width: auto;
     padding-left: 30%;
@@ -249,16 +247,37 @@ a>img {
 }
 
 @media only screen and (max-width:810px) {
-
     .container {
         grid-template-columns: auto;
         position: absolute;
         overflow-x: hidden;
     }
 
+    img.imgme {
+        width: 68%;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        bottom: 42%;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .halfcircle {
+        width: 100%;
+        padding-top: 27%;
+        transform: translate(-10%, 0);
+        -webkit-transform: translate(-10%, 0);
+        bottom: 42%;
+    }
+
+    .circle-animation {
+        display: none;
+    }
+
     .information {
         position: absolute;
-        top: 100%;
+        top: 60%;
         padding: 2em;
         left: 0;
         right: 0;
@@ -282,7 +301,16 @@ a>img {
 }
 
 @media only screen and (max-width:576px) {
+    img.imgme {
+        bottom: 14%;
+    }
+
+    .halfcircle {
+        bottom: 14%;
+    }
+
     .information {
+        top: 88%;
         padding: 1em;
     }
 
@@ -293,6 +321,7 @@ a>img {
     .info img {
         height: 2em;
     }
+
     .info img:hover {
         height: 1em;
     }
@@ -305,17 +334,17 @@ a>img {
         top: 3em;
         left: 45%;
     }
-    
+
     .info-2 {
         top: 8em;
         left: 10%;
     }
-    
+
     .info-3 {
         top: 11em;
         left: 70%;
     }
-    
+
     .info-4 {
         top: 16em;
         left: 42%;
@@ -337,8 +366,8 @@ a>img {
 
 @keyframes circleMove {
     0% {
-        transform: rotate(40deg);
-        -webkit-transform: rotate(40deg);
+        transform: rotate(60deg);
+        -webkit-transform: rotate(60deg);
 
     }
 
