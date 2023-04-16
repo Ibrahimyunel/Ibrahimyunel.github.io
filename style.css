@@ -51,7 +51,7 @@ img.imgme {
 
 .machine-1 {
     top: -2em;
-    left: 3em;
+    left: 2em;
     width: 10em;
     height: 10em;
     animation-duration: 2s;
@@ -116,8 +116,7 @@ img.imgme {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: skillsMove 11s linear infinite;
-    /*   change second here to add new skills guyssssssssssssssssssssssssssssssssssssssssssssssssssssss   */
+    animation: skillsMove linear infinite;
 }
 
 .skills img {
@@ -135,42 +134,27 @@ img.imgme {
 
 
 .information {
-    margin: 0 auto;
+    margin: auto;
 }
 
 div.main-object {
-    transform: matrix(1, 0.2, -1, 0.7, 0, 0);
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    padding: 3em 0;
+    gap: 4em 0;
 }
 
 .info {
+    height: 5rem;
+    width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-
-.info-1 {
-    top: 3em;
-    left: 45%;
-}
-
-.info-2 {
-    top: 8em;
-    left: 5%;
-}
-
-.info-3 {
-    top: 13em;
-    left: 70%;
-}
-
-.info-4 {
-    top: 18em;
-    left: 30%;
+    transform: matrix(1, 0.2, -1, 0.7, 0, 0);
 }
 
 .info img {
-    position: absolute;
     height: 3em;
     padding: 1rem;
     background-color: #fff;
@@ -191,10 +175,10 @@ div.main-object {
 .sign {
     border-radius: 10%;
     background-color: #fff;
-    width: 14.5em;
-    height: 14.5em;
+    padding: 7.5em;
     position: absolute;
     opacity: 0;
+    z-index: -100;
     animation: scaleIn .65s infinite cubic-bezier(.36, .11, .89, .32);
 }
 
@@ -254,22 +238,47 @@ a>img {
         overflow-x: hidden;
     }
 
+    .img-wrapper {
+        padding: 38vh 0;
+    }
+
+    .machine-1 {
+        display: none;
+    }
+
+    .machine-2 {
+        top: -1em;
+        left: -4em;
+        animation-direction: reverse;
+    }
+
+    .skills {
+        left: 0;
+        top: 1.5em;
+        animation: skillsMoveHorizontal linear infinite;
+    }
+
     img.imgme {
+        position: unset;
         width: 68%;
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
-        bottom: 42%;
+        display: flex;
         margin: auto;
         left: 0;
         right: 0;
     }
 
     .halfcircle {
-        width: 100%;
-        padding-top: 27%;
+        width: 120%;
+        padding-top: 7%;
         transform: translate(-10%, 0);
         -webkit-transform: translate(-10%, 0);
-        bottom: 42%;
+    }
+
+    .imgme-wrapper {
+        top: 20vh;
+        position: absolute;
     }
 
     .circle-animation {
@@ -277,12 +286,7 @@ a>img {
     }
 
     .information {
-        position: absolute;
-        top: 60%;
-        padding: 2em;
-        left: 0;
-        right: 0;
-
+        padding: 1em;
     }
 
     .information>* {
@@ -291,28 +295,14 @@ a>img {
         right: 0;
     }
 
-    div.main-object {
-        padding-right: 15%;
-    }
-
     .show-text-info {
         height: 8em;
     }
-
 }
 
 @media only screen and (max-width:576px) {
-    img.imgme {
-        bottom: 14%;
-    }
-
-    .halfcircle {
-        bottom: 14%;
-    }
-
-    .information {
-        top: 88%;
-        padding: 1em;
+    .img-wrapper {
+        padding: 30vh 0;
     }
 
     p.im-ibrahim {
@@ -323,32 +313,20 @@ a>img {
         height: 2em;
     }
 
-    .info img:hover {
-        height: 1em;
+    .sign {
+        padding: 6em;
     }
+}
 
-    div.main-object {
-        padding-right: 0;
+@media only screen and (max-height:650px) and (max-width:810px) {
+    .img-wrapper {
+        padding: 53vh 0;
     }
+}
 
-    .info-1 {
-        top: 3em;
-        left: 45%;
-    }
-
-    .info-2 {
-        top: 8em;
-        left: 10%;
-    }
-
-    .info-3 {
-        top: 11em;
-        left: 70%;
-    }
-
-    .info-4 {
-        top: 16em;
-        left: 42%;
+@media only screen and (max-height:650px) and (max-width:576px) {
+    .img-wrapper {
+        padding: 40vh 0;
     }
 }
 
@@ -378,22 +356,28 @@ a>img {
     }
 }
 
+@keyframes skillsMoveHorizontal {
+    0% {
+        transform:
+            translate(0, 0);
+        -webkit-transform:
+            translate(0, 0);
+    }
+
+    100% {
+        transform:
+            translate(1100px, 0);
+        -webkit-transform:
+            translate(1100px, 0);
+    }
+}
+
 @keyframes skillsMove {
     0% {
         transform:
             translate(0, 0);
         -webkit-transform:
             translate(0, 0);
-        opacity: 1;
-
-    }
-
-    42% {
-        opacity: 1;
-    }
-
-    43% {
-        opacity: 0;
     }
 
     100% {
@@ -401,7 +385,6 @@ a>img {
             translate(0, 1100px);
         -webkit-transform:
             translate(0, 1100px);
-        opacity: 0;
     }
 }
 

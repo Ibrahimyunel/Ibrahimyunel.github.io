@@ -47,8 +47,10 @@
                     <img src="./assets/automation.png" alt="">
                 </div>
             </div>
-            <div class="halfcircle"></div>
-            <img class="imgme" src="./assets/me.png" alt="it's me :)">
+            <div class="imgme-wrapper">
+                <div class="halfcircle"></div>
+                <img class="imgme" src="./assets/me.png" alt="it's me">
+            </div>
         </div>
         <div class="information">
             <p class="show-text-info" id="show_text_info"></p>
@@ -92,7 +94,7 @@
         var arrSkills = ["html", "css", "js", "react", "nodejs", "jquery", "bootstrap", "php", "python", "mongodb", "docker"];
         var skills = "";
         for (var i = 0; i < arrSkills.length; i++) {
-            skills += `<div class="skills" style="animation-delay: ${i}s">
+            skills += `<div class="skills" style="animation-delay: ${i}s; animation-duration: ${arrSkills.length}s;">
                             <img src="./assets/${arrSkills[i]}.png" alt="${arrSkills[i]}">
                             <div class="skills-bg"></div>
                         </div>`;
