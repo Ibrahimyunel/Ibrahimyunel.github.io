@@ -349,9 +349,9 @@ a>img {
 
     100% {
         transform:
-            translate(1100px, 0);
+            translate(1200px, 0);
         -webkit-transform:
-            translate(1100px, 0);
+            translate(1200px, 0);
     }
 }
 
@@ -365,9 +365,9 @@ a>img {
 
     100% {
         transform:
-            translate(0, 1100px);
+            translate(0, 1200px);
         -webkit-transform:
-            translate(0, 1100px);
+            translate(0, 1200px);
     }
 }
 

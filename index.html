@@ -91,7 +91,7 @@
 
     <script>
         var skillsAnimation = document.querySelector("div.skills-animation");
-        var arrSkills = ["html", "css", "js", "react", "nodejs", "jquery", "bootstrap", "php", "python", "mongodb", "docker"];
+        var arrSkills = ["html", "css", "js", "sass", "bootstrap", "webpack", "react", "nodejs", "php", "python", "mongodb", "docker"];
         var skills = "";
         for (var i = 0; i < arrSkills.length; i++) {
             skills += `<div class="skills" style="animation-delay: ${i}s; animation-duration: ${arrSkills.length}s;">
@@ -101,10 +101,10 @@
         }
         skillsAnimation.innerHTML = skills;
 
-        var arrinfo = [{ info: "I'm from Indonesia, I've been studying in Budi Luhur University for the Information System major" },
-        { info: "In collage the most focused subject is about Data Science. However, I'm really interested in web development so in my spare time i'm exploring skills about it" },
-        { info: "I could understand the flow of program development, especially web development because i'm so glad when i was successfully implementing a friendly and useful UI/UX in accordance with needs" },
-        { info: "My goals as a developer is become a Fullstack developer, to achieve it i decided to be proficient as a Front-end developer first" }
+        var arrinfo = [{ info: "I'm from Indonesia, I'm studying in Budi Luhur University with the Information System major" },
+        { info: "In college the most subject is about Data Science. However, I'm really interested in web development so I explore skills about it" },
+        { info: "I understand flow of program development, especially web development because I'm so glad when I was successfully implementing useful features in accordance with needs" },
+        { info: "One of my goals as a developer is become a Fullstack developer, to achieve it I decided to be proficient as a Front-end developer first" }
         ];
         var showText = document.getElementById("show_text_info");
         var sign = document.getElementById("sign");
