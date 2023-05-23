@@ -154,7 +154,7 @@ div.main-object {
     transform: matrix(1, 0.2, -1, 0.7, 0, 0);
 }
 
-.info img {
+.info img:not(.sign) {
     height: 3em;
     padding: 1rem;
     background-color: #fff;
@@ -163,23 +163,21 @@ div.main-object {
     transition: .3s;
 }
 
-.info img:hover {
-    height: 2em;
+.info img:not(.sign):hover {
     cursor: pointer;
 }
 
-.info img:active {
-    height: 4em;
+.info img:not(.sign):active {
+    height: 2em;
 }
 
 .sign {
     border-radius: 10%;
-    background-color: #fff;
-    padding: 7.5em;
+    width: 3em;
     position: absolute;
-    opacity: 0;
-    z-index: -100;
-    animation: scaleIn .65s infinite cubic-bezier(.36, .11, .89, .32);
+    bottom: -1.5em;
+    right: -1em;
+    transform: rotate(-45deg);
 }
 
 .text-info {
@@ -304,12 +302,18 @@ a>img {
         font-size: 2rem;
     }
 
-    .info img {
+    .info img:not(.sign) {
         height: 2em;
     }
 
+    .info img:not(.sign):active {
+        height: 1em;
+    }
+
     .sign {
-        padding: 6em;
+        width: 2.5em;
+        bottom: -.9em;
+        right: -.9em;
     }
 }
 
